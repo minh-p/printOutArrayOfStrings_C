@@ -6,7 +6,7 @@
 
 void printWords(char *strings[99][99], int amountOfStrings, char *stringInBetween[99]) {
     for (int i = 0; i < amountOfStrings; i++) {
-        printf("%s", *strings[i]);
+        printf("%s\n", *strings[i]);
     }
 }
 
@@ -30,7 +30,7 @@ int main() {
     char stringInBetween[] = "\n";
     char *stringInBetweenPtr[10];
 
-    for (int i = 0; i < 99; i++) {
+    for (int i = 0; i < sizeof stringInBetween / sizeof stringInBetween[0]; i++) {
         stringInBetweenPtr[i] = &stringInBetween[i];
     }
 
